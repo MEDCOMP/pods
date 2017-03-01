@@ -14,7 +14,7 @@ class normalize(task.Task):
 
     def execute(self, output):
         headers = {'content-type': 'application/json'}
-        url = 'http://192.168.99.101:31142'
+        url = 'http://192.168.99.101:30402'
         data = {"array":output}
         response = requests.post(url, data=json.dumps(data), headers=headers)
         print("%s: %s" % (self.name, response.text))
